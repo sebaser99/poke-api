@@ -78,7 +78,6 @@ async function obtenerNombreYTipoEvolucionPokemon(url, name){
         console.log(name, ' especies: ',  especies);
         let respuesta2 = await fetch(especies.evolution_chain.url)
         let evolution = await respuesta2.json();
-        console.log(evolution)
         console.log(especies.name, ' su evolución actual la máxima de nivel ', especies.shape.name);
         console.log(especies.name, ' su evolución anterior fue  ', evolution.chain.evolves_to[0].species.name);
         console.log(evolution.chain.evolves_to[0].species.name, ' su evolución anterior fue  ', evolution.chain.species.name);
